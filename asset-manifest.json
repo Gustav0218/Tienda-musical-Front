@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Tienda-musical-Front/static/css/main.073c9b0a.css",
+    "main.js": "/Tienda-musical-Front/static/js/main.cf54dea1.js",
+    "static/js/787.3d04a792.chunk.js": "/Tienda-musical-Front/static/js/787.3d04a792.chunk.js",
+    "static/media/logo.svg": "/Tienda-musical-Front/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/Tienda-musical-Front/index.html",
+    "main.073c9b0a.css.map": "/Tienda-musical-Front/static/css/main.073c9b0a.css.map",
+    "main.cf54dea1.js.map": "/Tienda-musical-Front/static/js/main.cf54dea1.js.map",
+    "787.3d04a792.chunk.js.map": "/Tienda-musical-Front/static/js/787.3d04a792.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.cf54dea1.js"
+  ]
+}
