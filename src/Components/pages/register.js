@@ -1,7 +1,7 @@
 const Register = () => {
   return (
     <>
-      <div className="card-bg-light">
+      <div className="container-reg">
         <article className="card-body mx-auto">
           <h4 className="card-title mt-3 text-center">Crea una cuenta</h4>
           <p className="text-center">Empieza con una cuenta gratis</p>
