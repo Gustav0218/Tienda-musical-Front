@@ -3,98 +3,97 @@ const Register = () => {
     <>
       <div className="card-bg-light">
         <article className="card-body mx-auto">
-          <h4 class="card-title mt-3 text-center">Create Account</h4>
-          <p class="text-center">Get started with your free account</p>
+          <h4 className="card-title mt-3 text-center">Crea una cuenta</h4>
+          <p className="text-center">Empieza con una cuenta gratis</p>
           <p>
-            <a href="" class="btn btn-block btn-twitter">
+            <a href="" className="btn btn-block btn-twitter">
               {" "}
-              <i class="fab fa-twitter"></i>   Login via Twitter
+              <i className="-twitter"></i>   Login  Twitter
             </a>
-            <a href="" class="btn btn-block btn-facebook">
+            <a href="" className="btn btn-block btn-facebook">
               {" "}
-              <i class="fab fa-facebook-f"></i>   Login via facebook
+              <i className="fab fa-facebook-f"></i>   Login  facebook
             </a>
           </p>
-          <p class="divider-text">
-            <span class="bg-light">OR</span>
+          <p className="divider-text">
+            <span className="bg-light">O</span>
           </p>
         </article>
         <form/>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
+        <div className="form-group input-group">
+          <div className="input-group-prepend">
+            <span className="input-group-text">
               {" "}
-              <i class="fa fa-user"></i>{" "}
+              <i className="fa fa-user"></i>{" "}
             </span>
           </div>
           <input
             name=""
-            class="form-control"
-            placeholder="Full name"
+            className="form-control"
+            placeholder="Nombre completo"
             type="text"
           />
         </div>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
+        <div className="form-group input-group">
+          <div className="input-group-prepend">
+            <span className="input-group-text">
               {" "}
-              <i class="fa fa-envelope"></i>{" "}
+              <i className="fa fa-envelope"></i>{" "}
             </span>
           </div>
           <input
             name=""
-            class="form-control"
-            placeholder="Email address"
+            className="form-control"
+            placeholder="Correo electronico"
             type="email"
           />
         </div>
-        <div class="form-group input-group">
-          <div class="input-group-prepend">
-            <span class="input-group-text">
+        <div className="form-group input-group">
+          <div className="input-group-prepend">
+            <span className="input-group-text">
               {" "}
-              <i class="fa fa-phone"></i>{" "}
+              <i className="fa fa-phone"></i>{" "}
             </span>
           </div>
-          <select class="custom-select">
-            <option selected="">+971</option>
-            <option value="1">+972</option>
-            <option value="2">+198</option>
-            <option value="3">+701</option>
+          <select className="custom-select">
+            <option selected="">Celular</option>
+            <option value="1">Hogar</option>
+            <option value="2">Trabajo</option>
           </select>
           <input
             name=""
-            class="form-control"
-            placeholder="Phone number"
+            className="form-control"
+            placeholder="Telefono de contacto"
             type="text"
           />
         </div>
-        <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+        <div className="form-group input-group">
+    	<div className="input-group-prepend">
+		    <span className="input-group-text"> <i className="fa fa-building"></i> </span>
 		</div>
-		<select class="form-control">
-			<option selected=""> Select job type</option>
-			<option>Designer</option>
-			<option>Manager</option>
-			<option>Accaunting</option>
+		<select className="form-control">
+			<option selected="">Selecciona tu interès</option>
+			<option>Estudiante</option>
+			<option>Profesional</option>
+			<option>Inversionista</option>
 		</select>
 	</div>
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+    <div className="form-group input-group">
+    	<div className="input-group-prepend">
+		    <span className="input-group-text"> <i className="fa fa-lock"></i> </span>
 		</div>
-        <input class="form-control" placeholder="Create password" type="password"/>
+        <input className="form-control" placeholder="Contraseña de min 10 caracterès" type="password"/>
     </div>
-    <div class="form-group input-group">
-    	<div class="input-group-prepend">
-		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+    <div className="form-group input-group">
+    	<div className="input-group-prepend">
+		    <span className="input-group-text"> <i className="fa fa-lock"></i> </span>
 		</div>
-        <input class="form-control" placeholder="Repeat password" type="password"/>
+        <input className="form-control" placeholder="Confirma tu contraseña" type="password"/>
     </div>
-    <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+    <div className="form-group">
+        <button type="submit" className="btn btn-primary btn-block"> Crear Cuenta  </button>
     </div>
-    <p class="text-center">Have an account? <a href="">Log In</a> </p>
+    <p className="text-center">¿Ya cuentas con un registro? <a href="login">Log In</a> </p>
     <form/>
     <article/> 
       </div>
