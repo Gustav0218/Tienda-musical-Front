@@ -42,7 +42,7 @@ const footer = () => {
             <div className="col-md-3 col-sm-6">
               <h4>Compañia</h4>
               <ul className="list-unstyled">
-              <li><a href='/'>Contactanos</a></li>
+              <li><a href='formulario'>Contactanos</a></li>
                 <li><a href=''>Aviso de privacidad</a></li>
                 <li><a href=''>Blog</a></li>
                 <li><a href=''>Eventos</a></li>

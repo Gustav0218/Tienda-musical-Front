@@ -6,10 +6,11 @@ import Footer from "../shared/footer";
 
 const container = () => {
   return (
-    <>
+    <> <div className='container-page'>
       <Header />
       <Outlet />
       <Footer />
+      </div>
     </>
   );
 };

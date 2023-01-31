@@ -6,17 +6,17 @@ const Register = () => {
           <h4 className="card-title mt-3 text-center">Crea una cuenta</h4>
           <p className="text-center">Empieza con una cuenta gratis</p>
           <p>
-            <a href="" className="btn btn-block btn-twitter">
+            <a href="https://www.facebook.com" className="btn btn-block btn-twitter">
               {" "}
-              <i className="-twitter"></i>   Login  Twitter
+              <i className="fab fa-twitter"></i>   Login  Twitter
             </a>
-            <a href="" className="btn btn-block btn-facebook">
+            <a href="https://twitter.com" className="btn btn-block btn-facebook">
               {" "}
-              <i className="fab fa-facebook-f"></i>   Login  facebook
+              <i className="fab fa-facebook-f"></i>   Login  Facebook
             </a>
           </p>
           <p className="divider-text">
-            <span className="bg-light">O</span>
+            <span className="bg-dark">O</span>
           </p>
         </article>
         <form/>
@@ -48,36 +48,6 @@ const Register = () => {
             type="email"
           />
         </div>
-        <div className="form-group input-group">
-          <div className="input-group-prepend">
-            <span className="input-group-text">
-              {" "}
-              <i className="fa fa-phone"></i>{" "}
-            </span>
-          </div>
-          <select className="custom-select">
-            <option selected="">Celular</option>
-            <option value="1">Hogar</option>
-            <option value="2">Trabajo</option>
-          </select>
-          <input
-            name=""
-            className="form-control"
-            placeholder="Telefono de contacto"
-            type="text"
-          />
-        </div>
-        <div className="form-group input-group">
-    	<div className="input-group-prepend">
-		    <span className="input-group-text"> <i className="fa fa-building"></i> </span>
-		</div>
-		<select className="form-control">
-			<option selected="">Selecciona tu interès</option>
-			<option>Estudiante</option>
-			<option>Profesional</option>
-			<option>Inversionista</option>
-		</select>
-	</div>
     <div className="form-group input-group">
     	<div className="input-group-prepend">
 		    <span className="input-group-text"> <i className="fa fa-lock"></i> </span>

@@ -3,7 +3,7 @@ import { BrowserRouterProps, Routes,Route,BrowserRouter,} from "react-router-dom
 import Container from "./Components/shared/container";
 import Home from "./Components/pages/home"
 import NoPage from "./Components/pages/noPage";
-import Contact from "./Components/pages/contact";
+import Catalogo from "./Components/pages/catalogo";
 import Register from "./Components/pages/register";
 import Login from "./Components/pages/login";
 import Formulario from "./Components/pages/formulario";
@@ -17,7 +17,7 @@ function App() {
           <Route path="register" element={<Register/>}></Route>
           <Route path="formulario" element={<Formulario/>}></Route>
          <Route path="login" element={<Login />}></Route> 
-          <Route path="contactanos" element={<Contact />}></Route>
+          <Route path="catalogo" element={<Catalogo />}></Route>
           <Route path="**"element={<NoPage/>}></Route>
         </Route>
       </Routes>
