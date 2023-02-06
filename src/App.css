@@ -146,3 +146,107 @@ h2 {
 
 
 
+
+.btn-compras{
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #46ba91a1;
+  border-radius: 15px;
+}
+
+.btn-carrito{
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: #ef4646f7;
+  border-radius: 15px;
+}
+
+/*----------Guitarras----------*/
+
+.guitar-cards{
+  display: flex;
+  flex-direction: row;
+}
+
+/*------------Flautas----------*/
+
+body {
+  font-family: Varela Round;
+  background: #f1f1f1;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container-flautas{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+
+
+/* Card Styles */
+
+.card-image img {
+  max-height: 100%;
+  max-width: 100%;
+  
+}
+
+.card-action {
+  position: relative;
+  float: right;
+  margin-top: -25px;
+  margin-right: 20px;
+  z-index: 2;
+  color: #E26D5C;
+  background: #fff;
+  border-radius: 100%;
+  padding: 15px;
+  font-size: 15px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card-heading {
+  font-size: 18px;
+  font-weight: bold;
+  background: #fff;
+  padding: 10px 15px;
+}
+
+.card-text {
+  padding: 10px 15px;
+  background: #fff;
+  font-size: 14px;
+  color: #636262;
+}
+
+.card-button {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  width: 100%;
+  background-color: #1F487E;
+  color: #fff;
+  border-radius: 0 0 8px 8px;
+}
+
+.card-button:hover {
+  text-decoration: none;
+  background-color: #1D3461;
+  color: #fff;
+
+}
+
+

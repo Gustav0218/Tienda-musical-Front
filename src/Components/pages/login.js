@@ -1,9 +1,12 @@
+import { useState,useRef, useEffect } from "react";
+
 const login = () => {
+  
   return (
     <>
-      <div className="signin">
+      <div className="signin" >
         <div className="back-img">
-          <div className="sign-in-text text-center">
+          <div className="sign-in-text text-center" >
             <h2 className="active">Sign In</h2>
           </div>
           <div className="layer"></div>
@@ -14,9 +17,11 @@ const login = () => {
             <i className="fa fa-envelope"></i>{" "}
             <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
               <input
-                className="mdl-textfield__input"
-                type="email"
-                placeholder="Email"
+               id="username"
+                type="text"
+                placeholder="Email o Nombre de usuario"
+                
+                required
               />
             </div>
             <br />
@@ -24,10 +29,10 @@ const login = () => {
             <i className="fa fa-lock"></i>
             <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
               <input
-                pattern=".{8,}"
                 placeholder="Password"
-                className="mdl-textfield__input"
                 type="password"
+                id="password"
+               
               />
             </div>
             <br />
