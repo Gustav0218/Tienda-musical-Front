@@ -1,5 +1,7 @@
-import { useState, createContext } from 'react'
-import clienteAxios from '../config/axios'
+import { createContext, useState } from 'react'
+
+import clienteAxios from '../config/clienteAxios'
+
 export const UserContext = createContext()
 
 export const UserProvider = ({ children }) => {

@@ -1,8 +1,11 @@
 //Esta carpeta va a manejar los valores que se muestran en la tabla// 
 
 //Importaciones//
-import { useState, createContext } from 'react'
-import clienteAxios from '../config/axios'
+
+import { createContext, useState } from 'react'
+
+import clienteAxios from '../config/clienteAxios'
+
 export const AppContext = createContext()
 
 export const AppProvider = ({ children }) => {
