@@ -1,12 +1,24 @@
-import { useState,useRef, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 
-const login = () => {
-  
+import { UserContext } from "./../../context/userContext";
+import { useNavigate } from "react-router-dom";
+
+const Login = () => {
+  const userCtx = useContext(UserContext);
+  const { registerUser, authStatus, verifyingToken, formData } = userCtx;
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    verifyingToken();
+    if (authStatus) {
+      navigate("/catalogo");
+    }
+  }, [authStatus]);
   return (
     <>
-      <div className="signin" >
+      <div className="signin">
         <div className="back-img">
-          <div className="sign-in-text text-center" >
+          <div className="sign-in-text text-center">
             <h2 className="active">Sign In</h2>
           </div>
           <div className="layer"></div>
@@ -17,10 +29,9 @@ const login = () => {
             <i className="fa fa-envelope"></i>{" "}
             <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
               <input
-               id="username"
+                id="username"
                 type="text"
                 placeholder="Email o Nombre de usuario"
-                
                 required
               />
             </div>
@@ -28,12 +39,7 @@ const login = () => {
             <br />
             <i className="fa fa-lock"></i>
             <div className="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input
-                placeholder="Password"
-                type="password"
-                id="password"
-               
-              />
+              <input placeholder="Password" type="password" id="password" />
             </div>
             <br />
             <p className="forgot-text">Forgot Password ?</p>
@@ -61,4 +67,4 @@ const login = () => {
   );
 };
 
-export default login;
+export default Login;

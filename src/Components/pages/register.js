@@ -1,20 +1,26 @@
-import clienteAxios from "../../config/clienteAxios"
-import { useState } from "react";
+import { Button, Col, Container, Form, Row } from "react-bootstrap";
+import React, { useContext, useEffect } from "react";
+
+import FormInput from "./../../Components/FormInput";
+import { UserContext } from "./../../context/userContext";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const [inputs, setInputs] = useState({});
+  const userCtx = useContext(UserContext);
+  const { registerUser, authStatus, verifyingToken, formData } = userCtx;
+  const navigate = useNavigate();
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs((values) => ({ ...values, [name]: value }));
-  };
+  useEffect(() => {
+    verifyingToken();
+    if (authStatus) {
+      navigate("/catalogo");
+    }
+  }, [authStatus]);
 
-  const handleSubmit = (event) => {
+  if (authStatus) return null;
+  const sendData = (event) => {
     event.preventDefault();
-    clienteAxios.post("/customers", inputs).then((response) => {
-      console.log(response);
-    });
+    registerUser(formData);
   };
 
   return (
@@ -43,37 +49,11 @@ const Register = () => {
             <span className="bg-dark">O</span>
           </p>
         </article>
-        <form onSubmit={handleSubmit}>
-          <div className="form-group input-group">
-            <div className="input-group-prepend">
-              <span className="input-group-text">
-                {" "}
-                <i className="fa fa-user"></i>{" "}
-              </span>
-            </div>
-            <input
-              onChange={handleChange}
-              name="user"
-              className="form-control"
-              placeholder="Nombre completo"
-              type="text"
-            />
-          </div>
-          <div className="form-group input-group">
-            <div className="input-group-prepend">
-              <span className="input-group-text">
-                {" "}
-                <i className="fa fa-envelope"></i>{" "}
-              </span>
-            </div>
-            <input
-              onChange={handleChange}
-              name="email"
-              className="form-control"
-              placeholder="Correo electronico"
-              type="email"
-            />
-          </div>
+        <Form onSubmit={(e) => sendData(e)} >
+        <FormInput tipo="username" />
+        <FormInput tipo="email" />
+        <FormInput tipo="password" />
+
           <div className="form-group input-group">
             <div className="input-group-prepend">
               <span className="input-group-text">
@@ -82,20 +62,6 @@ const Register = () => {
               </span>
             </div>
             <input
-              className="form-control"
-              placeholder="Contraseña de min 10 caracterès"
-              type="password"
-            />
-          </div>
-          <div className="form-group input-group">
-            <div className="input-group-prepend">
-              <span className="input-group-text">
-                {" "}
-                <i className="fa fa-lock"></i>{" "}
-              </span>
-            </div>
-            <input
-              onChange={handleChange}
               name="password"
               className="form-control"
               placeholder="Confirma tu contraseña"
@@ -111,7 +77,7 @@ const Register = () => {
           <p className="text-center">
             ¿Ya cuentas con un registro? <a href="login">Log In</a>{" "}
           </p>
-        </form>
+        </Form>
         <article />
       </div>
     </>

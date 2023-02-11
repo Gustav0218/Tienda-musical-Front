@@ -1,15 +1,15 @@
+import { Navigate, Outlet } from "react-router-dom";
 import { useContext, useEffect } from "react";
-import {Navigate,Outlet} from 'react-router-dom';
-import {UserContext} from "../../context/userContext";
 
-export default function Privateroute(){
-    const userCtx=useContext(UserContext);
-    const {authStatus, verifyingToken}=userCtx
+import { UserContext } from "../../context/userContext";
 
-   useEffect(()=>{
-    verifyingToken()
-   },[])
+export default function Privateroute() {
+  const userCtx = useContext(UserContext);
+  const { authStatus, verifyingToken } = userCtx;
 
-   return authStatus ? <Outlet/> : <Navigate to ='/login' replace />
+  useEffect(() => {
+    verifyingToken();
+  }, []);
 
+  return authStatus ? <Outlet /> : <Navigate to="/login" replace />;
 }
